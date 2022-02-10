@@ -8,7 +8,7 @@ app.config["SECRET_KEY"]="nininini"
 User = namedtuple('User', field_names=['email', 'password'])
 user =User(email='john@black.com', password='black')
 
-app.route('/login/', methods=['GET','POST'])
+@app.route('/login/', methods=['GET','POST'])
 def login():
     form = EmailPasswordForm()
     error=" "
